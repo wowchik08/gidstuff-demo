@@ -15,13 +15,19 @@
           <li class="content-menu__item">
             <router-link
               class="content-menu__link content-menu__link--active"
-              :to="{ name: 'Main' }">Женщинам</router-link>
+              :to="{ name: 'Main' }"
+              >Женщинам</router-link
+            >
           </li>
           <li class="content-menu__item">
-            <router-link class="content-menu__link" :to="{ name: 'Main' }">Мужчинам</router-link>
+            <router-link class="content-menu__link" :to="{ name: 'Main' }"
+              >Мужчинам</router-link
+            >
           </li>
           <li class="content-menu__item">
-            <router-link class="content-menu__link" :to="{ name: 'Main' }">Детям</router-link>
+            <router-link class="content-menu__link" :to="{ name: 'Main' }"
+              >Детям</router-link
+            >
           </li>
         </ul>
         <router-link class="logo header__logo" :to="{ name: 'Main' }">
@@ -229,222 +235,5 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-.header {
-  margin-bottom: 12px;
-
-  @media (max-width: 768px) {
-    margin-bottom: 0;
-  }
-
-  &__run {
-    justify-content: space-around;
-    background-color: black;
-    color: white;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 14px 0 15px;
-
-    @media (max-width: 768px) {
-      padding: 3px 0;
-    }
-  }
-
-  &__run-item {
-    text-transform: uppercase;
-    color: white;
-    letter-spacing: 3px;
-    font-weight: 600;
-    font-style: normal;
-
-    @media (max-width: 768px) {
-      font-size: 8px;
-      letter-spacing: 1px;
-    }
-  }
-
-  &__nav-main {
-    padding: 30px 0;
-    align-items: center;
-
-    @media (max-width: 768px) {
-      padding: 0;
-    }
-  }
-
-  &__menu-btn {
-    display: none;
-
-    @media (max-width: 768px) {
-      background-color: black;
-      color: white;
-      display: block;
-      position: relative;
-      overflow: hidden;
-      margin: 0 0 0 -15px;
-      padding: 0;
-      width: 50px;
-      height: 50px;
-      font-size: 0;
-      text-indent: -9999px;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      box-shadow: none;
-      border: none;
-      border-radius: none;
-      cursor: pointer;
-      -webkit-transition: background 0.3s;
-      transition: background 0.3s;
-      top: 0;
-
-      &:focus {
-        outline: transparent;
-      }
-    }
-
-    &.is-active .header__menu-span {
-      background: none;
-
-      &::before,
-      &::after {
-        background-color: white;
-        transition-delay: 0s, 0.3s;
-      }
-
-      &::before {
-        top: 0;
-        transform: rotate(45deg);
-      }
-
-      &::after {
-        bottom: 0;
-        transform: rotate(-45deg);
-      }
-    }
-
-    &.is-active {
-      .content-menu {
-        position: absolute;
-        top: 80px;
-        left: 0;
-        background-color: white;
-        z-index: 10;
-        width: 100%;
-        justify-content: center;
-        padding: 12px 0;
-
-        &--sub {
-          top: 120px;
-          justify-content: center;
-          flex-wrap: wrap;
-        }
-      }
-    }
-  }
-
-  &__menu-span {
-    display: block;
-    position: absolute;
-    top: 22px;
-    left: 5px;
-    right: 5px;
-    height: 3px;
-    background: white;
-
-    &::before,
-    &::after {
-      position: absolute;
-      display: block;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      background-color: white;
-      content: "";
-      transition: 0.3s;
-    }
-
-    &::before {
-      top: -9px;
-      transition-property: top, transform;
-    }
-
-    &::after {
-      bottom: -9px;
-      transition-property: bottom, transform;
-    }
-  }
-
-  &__logo {
-    display: block;
-    margin-left: auto;
-    flex-grow: 0.1;
-
-    @media (max-width: 768px) {
-      margin: 0 auto;
-      flex-grow: 0;
-      max-width: 45%;
-    }
-  }
-
-  &__btns-wrapper {
-    align-items: center;
-  }
-
-  &__btn {
-    border: none;
-    background-color: white;
-    padding: 0;
-    position: relative;
-    cursor: pointer;
-
-    &--search {
-      display: none;
-
-      @media (max-width: 768px) {
-        display: block;
-        margin-right: 8px;
-      }
-    }
-  }
-
-  &__cart-num {
-    margin: auto;
-  }
-
-  &__nav-sub {
-    align-items: baseline;
-
-    @media (max-width: 768px) {
-      padding: 0;
-    }
-  }
-
-  &__sub-menu {
-    .content-menu__link {
-      font-size: 15px;
-      font-weight: 500;
-      text-transform: none;
-      letter-spacing: 0.4px;
-      font-style: normal;
-    }
-  }
-
-  &__search-wrapper {
-    max-width: 320px;
-    justify-content: center;
-    width: 100%;
-
-    @media (max-width: 768px) {
-      display: none;
-    }
-  }
-
-  &__search {
-    z-index: 2;
-  }
-}
-@import "@/styles/components/menu.scss";
-@import "@/styles/components/cart.scss";
-@import "@/styles/components/product-show.scss";
-@import "@/styles/components/content-menu.scss";
+@import "@/styles/components/the-header.scss";
 </style>
