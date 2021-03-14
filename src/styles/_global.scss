@@ -1,0 +1,67 @@
+@import "./reset";
+
+body {
+    background-color: white;
+    font-family: Gilroy;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #243f4d;
+}
+
+.container {
+    max-width: 1358px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    &--box {
+        max-width: 1328px;
+        padding: 0;
+    }
+
+}
+
+.d-flex {
+    display: flex;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.d-none {
+    display: none;
+}
+
+// block
+@import '@/styles/block/header.scss';
+@import '@/styles/block/top-slider.scss';
+@import '@/styles/block/offers.scss';
+@import '@/styles/block/product.scss';
+@import '@/styles/block/order.scss';
+@import '@/styles/block/success.scss';
+@import '@/styles/block/footer.scss';
+// compnents
+@import '@/styles/components/content-menu.scss';
+@import '@/styles/components/menu.scss';
+@import '@/styles/components/all-svg.scss';
+@import '@/styles/components/custom.scss';
+@import '@/styles/components/brands.scss';
+@import '@/styles/components/product-card.scss';
+@import '@/styles/components/cart.scss';
+@import '@/styles/components/product-show.scss';
+@import '@/styles/components/recent.scss';
+@import '@/styles/components/header-order.scss';
+@import '@/styles/components/order-card.scss';

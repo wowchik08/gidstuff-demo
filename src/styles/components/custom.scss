@@ -1,0 +1,61 @@
+.custom-select {
+    .jq-selectbox {
+        &__select {
+            padding: 0 30px 0 10px;
+            border: none;
+            border-radius: 0;
+            background: transparent;
+            box-shadow: none;
+            font: 16px/32px Gilroy;
+            font-weight: 600;
+            max-width: 102px;
+
+        }
+
+        &__trigger {
+            border: none;
+            right: 5px;
+        }
+
+        &__trigger-arrow {
+            border-top-color: black;
+        }
+
+        &__dropdown {
+            top: 33px !important;
+            bottom: auto !important;
+            background: white;
+            font-size: 15px;
+            letter-spacing: 0.4px;
+            font-weight: 500;
+            border-radius: 0;
+            padding: 16px 18px;
+
+            li {
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 100%;
+                letter-spacing: 0.4px;
+                color: #292B2C;
+                padding: 8px 0;
+                border-bottom: 1px solid transparent;
+
+                &.selected {
+                    border-bottom: 1px solid black;
+                }
+            }
+
+            li:hover {
+                background-color: white;
+                color: black;
+                border-bottom: 1px solid black;
+            }
+
+            li.selected {
+                background-color: white;
+                color: black;
+                border-bottom: 1px solid black;
+            }
+        }
+    }
+}

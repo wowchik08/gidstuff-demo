@@ -1,0 +1,146 @@
+.product-card {
+  flex-direction: column;
+  max-width: 320px;
+  text-align: left;
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__inner {
+    position: relative;
+    max-width: 320px;
+    max-height: 480px;
+    margin-bottom: 16px;
+  }
+
+  &__img {
+    height: auto;
+    object-fit: fill;
+  }
+
+  &__brand {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 9px 13px;
+    color: #000;
+    background-color: white;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 1.4px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media (max-width: 575px) {
+      top: 4px;
+      left: 4px;
+      font-size: 8px;
+      padding: 5px 7px;
+    }
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+
+    @media (max-width: 575px) {
+      font-size: 9px;
+    }
+  }
+
+  &__price {
+    padding: 8px 0px;
+  }
+
+  &__price-now {
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    margin-right: 16px;
+
+    @media (max-width: 575px) {
+      font-size: 13px;
+      letter-spacing: 1px;
+      margin-right: 8px;
+    }
+  }
+
+  &__old-price {
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #707274;
+    margin-right: 20px;
+
+    @media (max-width: 575px) {
+      font-size: 10px;
+      letter-spacing: 5%;
+      margin-right: 10px;
+    }
+  }
+
+  &__sale {
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #eb5757;
+
+    @media (max-width: 575px) {
+      font-size: 10px;
+      letter-spacing: 1px;
+    }
+  }
+
+  &__color-num {
+    color: #707274;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+  }
+
+  &__colors {
+    align-items: center;
+
+    @media (max-width: 575px) {
+      display: none;
+    }
+  }
+
+  &__color {
+    width: 8px;
+    height: 8px;
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+
+    &--orange {
+      background-color: #f2994a;
+    }
+
+    &--red {
+      background: #eb5757;
+    }
+
+    &--blue {
+      background: #2f80ed;
+    }
+
+    &--yelow {
+      background: #f2c94c;
+    }
+
+    &--light-blue {
+      background: #56ccf2;
+    }
+
+    &--black {
+      background: #000000;
+    }
+  }
+}
