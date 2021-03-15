@@ -94,94 +94,116 @@
           <div class="product__color">
             Цвет: <span class="product__color--name">Красный</span>
             <div class="product__color-links">
-              <a
-                href="#"
-                class="product__color-link product__color-link--red1"
-              ></a>
-              <a
-                href="#"
-                class="product__color-link product__color-link--gold"
-              ></a>
-              <a
-                href="#"
-                class="product__color-link product__color-link--yelow"
-              ></a>
-              <a
-                href="#"
-                class="product__color-link product__color-link--green"
-              ></a>
-              <a
-                href="#"
-                class="product__color-link product__color-link--blue"
-              ></a>
-              <a
-                href="#"
-                class="product__color-link product__color-link--light-blue"
-              ></a>
-              <a
-                href="#"
-                class="product__color-link product__color-link--black"
-              ></a>
-              <a
-                href="#"
-                class="product__color-link product__color-link--green"
-              ></a>
-              <a
-                href="#"
-                class="product__color-link product__color-link--blue"
-              ></a>
-              <a
-                href="#"
-                class="product__color-link product__color-link--light-blue"
-              ></a>
-              <a
-                href="#"
-                class="product__color-link product__color-link--black"
-              ></a>
-              <a
-                href="#"
-                class="product__color-link product__color-link--red1"
-              ></a>
-              <a
-                href="#"
-                class="product__color-link product__color-link--gold"
-              ></a>
-              <a
-                href="#"
-                class="product__color-link product__color-link--yelow"
-              ></a>
-              <a
-                href="#"
-                class="product__color-link product__color-link--green"
-              ></a>
-              <a
-                href="#"
-                class="product__color-link product__color-link--blue"
-              ></a>
-              <a
-                href="#"
-                class="product__color-link product__color-link--light-blue"
-              ></a>
-              <a
-                href="#"
-                class="product__color-link product__color-link--black"
-              ></a>
-              <a
-                href="#"
-                class="product__color-link product__color-link--green"
-              ></a>
-              <a
-                href="#"
-                class="product__color-link product__color-link--blue"
-              ></a>
-              <a
-                href="#"
-                class="product__color-link product__color-link--light-blue"
-              ></a>
-              <a
-                href="#"
-                class="product__color-link product__color-link--black"
-              ></a>
+              <div class="product__color-wrapper">
+                <div
+                  class="product__color-link product__color-link--red1"
+                ></div>
+              </div>
+              <div class="product__color-wrapper">
+                <div
+                  class="product__color-link product__color-link--gold"
+                ></div>
+              </div>
+              <div class="product__color-wrapper">
+                <div
+                  class="product__color-link product__color-link--yelow"
+                ></div>
+              </div>
+              <div class="product__color-wrapper">
+                <div
+                  class="product__color-link product__color-link--green"
+                ></div>
+              </div>
+              <div class="product__color-wrapper">
+                <div
+                  class="product__color-link product__color-link--blue"
+                ></div>
+              </div>
+              <div class="product__color-wrapper">
+                <div
+                  class="product__color-link product__color-link--light-blue"
+                ></div>
+              </div>
+              <div class="product__color-wrapper">
+                <div
+                  class="product__color-link product__color-link--black"
+                ></div>
+              </div>
+              <div class="product__color-wrapper">
+                <div
+                  class="product__color-link product__color-link--red1"
+                ></div>
+              </div>
+              <div class="product__color-wrapper">
+                <div
+                  class="product__color-link product__color-link--gold"
+                ></div>
+              </div>
+              <div class="product__color-wrapper">
+                <div
+                  class="product__color-link product__color-link--yelow"
+                ></div>
+              </div>
+              <div class="product__color-wrapper">
+                <div
+                  class="product__color-link product__color-link--green"
+                ></div>
+              </div>
+              <div class="product__color-wrapper">
+                <div
+                  class="product__color-link product__color-link--blue"
+                ></div>
+              </div>
+              <div class="product__color-wrapper">
+                <div
+                  class="product__color-link product__color-link--light-blue"
+                ></div>
+              </div>
+              <div class="product__color-wrapper">
+                <div
+                  class="product__color-link product__color-link--black"
+                ></div>
+              </div>
+              <div class="product__color-wrapper">
+                <div
+                  class="product__color-link product__color-link--red1"
+                ></div>
+              </div>
+              <div class="product__color-wrapper">
+                <div
+                  class="product__color-link product__color-link--gold"
+                ></div>
+              </div>
+              <div class="product__color-wrapper">
+                <div
+                  class="product__color-link product__color-link--yelow"
+                ></div>
+              </div>
+              <div class="product__color-wrapper">
+                <div
+                  class="product__color-link product__color-link--green"
+                ></div>
+              </div>
+              <div class="product__color-wrapper">
+                <div
+                  class="product__color-link product__color-link--blue"
+                ></div>
+              </div>
+              <div class="product__color-wrapper">
+                <div
+                  class="product__color-link product__color-link--light-blue"
+                ></div>
+              </div>
+              <div class="product__color-wrapper">
+                <div
+                  class="product__color-link product__color-link--black"
+                ></div>
+              </div>
+              <div class="product__color-wrapper">
+                <div
+                  class="product__color-link product__color-link--yelow"
+                ></div>
+              </div>
             </div>
             <div class="product__color-slider">
               <div class="product__color-item">
@@ -804,5 +826,6 @@
 export default {};
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import "@/styles/components/vue-product.scss";
 </style>

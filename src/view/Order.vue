@@ -359,5 +359,6 @@
 export default {};
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import "@/styles/components/vue-order.scss";
 </style>

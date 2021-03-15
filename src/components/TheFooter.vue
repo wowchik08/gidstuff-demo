@@ -2,7 +2,10 @@
   <footer class="footer">
     <div class="footer__inner container">
       <a class="logo footer__logo" href="#">
-        <img src="@/assets/images/gidstuff-logo-rev.svg" alt="Логотип gidstuff" />
+        <img
+          src="@/assets/images/gidstuff-logo-rev.svg"
+          alt="Логотип gidstuff"
+        />
       </a>
       <div class="footer__content">
         <address class="footer__contact">
@@ -140,10 +143,16 @@
             <img src="@/assets/images/footer/liqpay.png" alt="liqpay логотип" />
           </a>
           <a class="footer__payment-link" href="#">
-            <img src="@/assets/images/footer/new-post.png" alt="новая почта логотип" />
+            <img
+              src="@/assets/images/footer/new-post.png"
+              alt="новая почта логотип"
+            />
           </a>
         </div>
       </div>
     </div>
   </footer>
 </template>
+<style lang="scss" scoped>
+@import "@/styles/components/the-footer.scss";
+</style>

@@ -1,0 +1,221 @@
+.top-slider {
+  .slider {
+    max-width: 1328px;
+    width: 100%;
+    height: 420px;
+    background-image: url("~@/assets/images/top-slider/slider-img1.jpg");
+
+    @media (max-width: 768px) {
+      background-image: url("~@/assets/images/top-slider/slider768.jpg");
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    &__item {
+      padding: 80px 0px 16px 44px;
+
+      @media (max-width: 768px) {
+        padding: 50px 10px 0;
+        height: 70vh;
+      }
+    }
+
+    &__title {
+      color: white;
+      font-size: 28px;
+      line-height: 1.2;
+      font-weight: 600;
+      letter-spacing: 3.8px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+
+      @media (max-width: 768px) {
+        font-size: 18px;
+        line-height: 130%;
+        letter-spacing: 2.8px;
+      }
+    }
+
+    &__link {
+      padding-bottom: 8px;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 1.3;
+      letter-spacing: 1.4px;
+      border-bottom: 2px solid white;
+
+      &:hover {
+        border-color: transparent;
+      }
+    }
+
+    .slick-arrow {
+      position: absolute;
+      height: 48px;
+      width: 48px;
+      font-size: 0;
+      bottom: 20px;
+      border: none;
+      cursor: pointer;
+      background-repeat: no-repeat;
+      outline: transparent;
+      transition: 0.3s;
+    }
+
+    .slick-prev {
+      right: 92px;
+      background-image: url("~@/assets/images/top-slider/left.svg");
+      background-position: 50% 50%;
+
+      &:hover {
+        background-position: 30% 50%;
+      }
+    }
+
+    .slick-next {
+      right: 24px;
+      background-image: url("~@/assets/images/top-slider/right.svg");
+      background-position: 50% 50%;
+
+      &:hover {
+        background-position: 70% 50%;
+      }
+    }
+
+    .slick-dots {
+      display: flex;
+      position: absolute;
+      left: 44px;
+      bottom: 46px;
+
+      @media (max-width: 768px) {
+        left: 15px;
+        bottom: 30px;
+      }
+
+      li {
+        padding: 0;
+        margin: 0 4px;
+        width: 8px;
+        height: 8px;
+      }
+
+      button {
+        font-size: 0;
+        width: 8px;
+        height: 8px;
+        border: 1px solid #ffffff;
+        background-color: transparent;
+        text-decoration: none;
+        padding: 0;
+        outline: transparent;
+        cursor: pointer;
+      }
+
+      .slick-active {
+        button {
+          background-color: white;
+        }
+      }
+    }
+  }
+}
+
+.brands {
+  padding: 60px 0;
+
+  &__item {
+    max-width: 208px;
+    width: 100%;
+    height: 208px;
+    background: #ECF0F3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media(max-width: 992px) {
+      max-width: 188px;
+      max-height: 188px;
+
+    }
+
+    @media(max-width: 798px) {
+      max-width: 178px;
+      max-height: 178px;
+    }
+
+    @media(max-width: 575px) {
+      min-width: 100px;
+      height: 100px;
+    }
+  }
+
+  &__link {
+    max-width: 208px;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__img {
+    margin: auto;
+  }
+
+  .slick-slide div {
+    margin: 0 8px;
+  }
+}
+
+.offers {
+  text-align: center;
+  margin-bottom: 30px;
+
+  &__title {
+    text-align: left;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 1.2;
+    letter-spacing: 3.8px;
+    text-transform: uppercase;
+
+    @media(max-width: 575px) {
+      font-size: 18px;
+      letter-spacing: 2.8px;
+    }
+  }
+
+  &__items {
+    padding: 36px 0 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 59px 16px;
+
+    @media(max-width: 1200px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media(max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__btn {
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    background-color: black;
+    padding: 19px 5%;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 130%;
+
+    @media(max-width: 768px) {
+      padding: 19px 10%;
+    }
+
+    @media(max-width: 575px) {
+      padding: 19px 20%;
+    }
+  }
+}

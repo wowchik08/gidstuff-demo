@@ -25,5 +25,6 @@
 export default {};
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import "@/styles/components/vue-success.scss";
 </style>
