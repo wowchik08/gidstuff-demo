@@ -77,7 +77,11 @@
               <use xlink:href="@/assets/images/all-svg.svg#search"></use>
             </svg>
           </button>
-          <button class="header__btn header__btn--cart" type="button">
+          <button 
+            class="header__btn header__btn--cart" 
+            type="button"
+            @click="showCart"
+          >
             <svg class="cart-icon">
               <use xlink:href="@/assets/images/all-svg.svg#cart"></use>
             </svg>
@@ -129,109 +133,34 @@
         </div>
       </div>
     </nav>
-    <div class="cart">
-      <div class="cart__inner d-flex">
-        <div class="cart__top d-flex">
-          <div class="cart__back">
-            <img
-              class="cart__img"
-              src="@/assets/images/top-slider/left.svg"
-              alt=""
-            />
-          </div>
-          <p class="cart__title">
-            корзина
-            <span class="cart__num">(2)</span>
-          </p>
-        </div>
-        <div class="cart__content">
-          <div class="product-show d-flex">
-            <div class="product-show__inner">
-              <img
-                class="product-show__img"
-                src="/public/images/product/1.jpg"
-                alt=""
-              />
-            </div>
-            <div class="product-show__info d-flex">
-              <button type="button" class="product-show__delete"></button>
-              <h3 class="product-show__title">Трикотажные брюки джоггеры</h3>
-              <div class="product-show__size-color d-flex">
-                <div class="product-show__size">
-                  Размер: <span class="product-show__size-name">L</span>
-                </div>
-                <div class="product-show__color">
-                  Цвет: <span class="product-show__color-name">Фиолетовый</span>
-                </div>
-              </div>
-              <div class="product-show__price">
-                <span class="product-show__now-price">3 999 &#8372; </span>
-                <span class="product-show__old-price"> 4500 &#8372; </span>
-                <span class="product-show__sale">-10%</span>
-              </div>
-              <div class="product-show__delivery">
-                <span class="product-show__delivery-timing">7-10 дней</span>
-              </div>
-              <div class="product-show__amount">
-                <input
-                  class="product-show__amount-control"
-                  type="number"
-                  value="1"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="product-show d-flex">
-            <div class="product-show__inner">
-              <img
-                class="product-show__img"
-                src="/public/images/product/1.jpg"
-                alt=""
-              />
-            </div>
-            <div class="product-show__info d-flex">
-              <button type="button" class="product-show__delete"></button>
-              <h3 class="product-show__title">Трикотажные брюки джоггеры</h3>
-              <div class="product-show__size-color d-flex">
-                <div class="product-show__size">
-                  Размер: <span class="product-show__size-name">L</span>
-                </div>
-                <div class="product-show__color">
-                  Цвет: <span class="product-show__color-name">Фиолетовый</span>
-                </div>
-              </div>
-              <div class="product-show__price">
-                <span class="product-show__now-price">3 999 &#8372; </span>
-                <span class="product-show__old-price"> 4500 &#8372; </span>
-                <span class="product-show__sale">-10%</span>
-              </div>
-              <div class="product-show__delivery">
-                <span class="product-show__delivery-timing">7-10 дней</span>
-              </div>
-              <div class="product-show__amount">
-                <input
-                  class="product-show__amount-control"
-                  type="number"
-                  value="1"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="cart__footer d-flex">
-          <div class="cart__total">
-            итого:
-            <span class="cart__total-price">7 998 &#8372;</span>
-          </div>
-          <a class="cart__link" href="#">оформить заказ</a>
-        </div>
-      </div>
-    </div>
+    <TheCart 
+      :isCart="isCart"
+      @hiddenCart="hiddenCart" 
+    />
   </header>
 </template>
 
 <script>
-export default {};
+import TheCart from "@/components/TheCart";
+
+export default {
+  data () {
+    return {
+      isCart: false
+    }
+  },
+  components: {
+    TheCart
+  },
+  methods: {
+    showCart () {
+      this.isCart = true
+    },
+    hiddenCart () {
+      this.isCart = false
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>
