@@ -299,7 +299,11 @@
             <span class="product__sale">-10%</span>
           </div>
 
-          <button class="product__btn" type="submit">В корзину</button>
+          <button 
+            class="product__btn" 
+            type="submit"
+            @click.prevent="addProduct"
+          >В корзину</button>
         </form>
         <div class="product__delivery d-flex space-between">
           <span class="product__delivery-timing"> 7-10 дней </span>
@@ -823,7 +827,34 @@
 </template>
 
 <script>
-export default {};
+import { mapState } from 'vuex';
+import { mapMutations } from 'vuex'
+
+export default {
+  props: {
+    id: {
+      type: Number,
+      default: 1
+    }
+  },
+  computed: mapState({
+    products: state => state.Products.products,
+    product() {
+      return this.products.find(product => product.id === this.id)
+    }
+  }),
+  created() {
+
+  },
+  methods: {
+    ...mapMutations([
+      'ADD_PRODUCT',
+    ]),
+    addProduct () {
+      this.ADD_PRODUCT(this.product)
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>
