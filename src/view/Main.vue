@@ -23,8 +23,24 @@
           <a class="slider__link" href="#"> подробнее ({{ slide }}) </a>
         </div>
       </VueSlickCarousel>
-
-      <ul class="brands container container--box d-flex">
+      <VueSlickCarousel
+        v-bind="{
+          autoplay: true,
+          slidesToShow: 6,
+          touchMove: true,
+          dots: false,
+          arrows: false,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                arrows: false,
+              },
+            },
+          ],
+        }"
+        class="brands container"
+      >
         <li class="brands__item">
           <a class="brands__link d-flex" href="#">
             <img
@@ -133,7 +149,7 @@
             />
           </a>
         </li>
-      </ul>
+      </VueSlickCarousel>
     </section>
 
     <section class="offers container">
