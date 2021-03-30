@@ -18,6 +18,7 @@ const routes = [
     path: "/product/:id",
     name: "Product",
     component: Product,
+    props: true
   },
   {
     path: "/order",

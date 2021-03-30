@@ -61,18 +61,22 @@
                 <span class="order__info-total-price"> 4 199 &#8372; </span>
               </span>
             </div>
-            <div class="order-card d-flex">
-              <button type="button" class="order-card__delete"></button>
+            <div 
+              class="order-card d-flex"
+              v-for="product in cart"
+              :key="product.id"
+            >
+              <button @click="deleteProduct(product.id)" type="button" class="order-card__delete"></button>
               <div class="order-card__wrapper">
                 <img
                   class="order-card__img"
-                  src="/public/images/product/1-1.jpg"
+                  :src="product.images[0]"
                   alt=""
                 />
               </div>
               <div class="order-card__info">
                 <span class="order-card__brand">Zara</span>
-                <span class="order-card__name">Трикотажные брюки джоггеры</span>
+                <span class="order-card__name">{{ product.name }}</span>
                 <div class="order-card__size-color d-flex">
                   <span class="order-card__size">
                     Размер:
@@ -88,41 +92,9 @@
                 <input class="order-card__amount" type="number" value="1" />
               </div>
               <div class="order-card__price">
-                <span class="order-card__price-now">3 999 &#8372;</span>
-                <span class="order-card__old-price">4500 &#8372;</span>
-                <span class="order-card__sale">-10%</span>
-              </div>
-            </div>
-            <div class="order-card d-flex">
-              <button type="button" class="order-card__delete"></button>
-              <div class="order-card__wrapper">
-                <img
-                  class="order-card__img"
-                  src="/public/images/product/1-1.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="order-card__info">
-                <span class="order-card__brand">Zara</span>
-                <span class="order-card__name">Трикотажные брюки джоггеры</span>
-                <div class="order-card__size-color d-flex">
-                  <span class="order-card__size">
-                    Размер:
-                    <span class="order-card__size-name"> L </span>
-                  </span>
-                  <span class="order-card__color">
-                    Цвет:
-                    <span class="order-card__color-name"> Фиолетовый </span>
-                  </span>
-                </div>
-              </div>
-              <div class="order-card__number">
-                <input class="order-card__amount" type="number" value="1" />
-              </div>
-              <div class="order-card__price">
-                <span class="order-card__price-now">3 999 &#8372;</span>
-                <span class="order-card__old-price">4500 &#8372;</span>
-                <span class="order-card__sale">-10%</span>
+                <span class="order-card__price-now">{{ product.uah_price }} &#8372;</span>
+                <!-- <span class="order-card__old-price">4500 &#8372;</span>
+                <span class="order-card__sale">-10%</span> -->
               </div>
             </div>
             <div class="order__city">
@@ -356,7 +328,33 @@
 </template>
 
 <script>
-export default {};
+import { mapState } from "vuex";
+import { mapGetters } from 'vuex';
+import { mapMutations } from 'vuex'
+
+export default {
+  computed: {
+    ...mapState({
+      cart: (state) => state.Cart.cart,
+    }),
+    ...mapGetters([
+      'TOTAL_PRICE'
+    ])
+  },
+  methods: {
+    ...mapMutations([
+      'DELETE_PRODUCT'
+    ]),
+    makeOrder() {
+      if(this.cart.length) {
+        this.$router.push({ name: "Order" });
+      }
+    },
+    deleteProduct(id) {
+      this.DELETE_PRODUCT(id)
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>

@@ -1,0 +1,219 @@
+[
+    {
+        "id": 1,
+        "name": "РЮКЗАК С ЛОГОТИПОМ",
+        "description": "Синтетический материал снаружи. Застежка-молния",
+        "sizes": ["s"],
+        "color_combinations": {"Коричневый": ["brown"]},
+        "url": "https://www.guess.eu/en-ua/guess/women/outlet/accessories/all-over-logo-backpack-brown/HWELENP1035-BRO.html",
+        "images": [
+            "https://storage.googleapis.com/gidstuff_product_images/HWELENP1035-BRO.jpeg",
+            "https://storage.googleapis.com/gidstuff_product_images/HWELENP1035-BRO-ALT1.jpeg"
+        ],
+        "category": "рюкзак",
+        "materials": {"Полиуретан": 100},
+        "in_stock": false,
+        "uah_price": null
+    },
+    {
+        "id": 2,
+        "name": "КАРМАНЫ TEXTURE COAX",
+        "description": "ПАЛЬТО С КОЖАНЫМ ВЫРЕЗОМ И ДЛИННЫМ РУКАВОМ. КАРМАНЫ С КРЫШКОЙ ВПЕРЕД. НИЗКИЙ С ОТКРЫТИЕМ СПИНКИ. ПЕРЕДНЕЕ ЗАКРЫТИЕ С КНОПКАМИ.",
+        "sizes": ["xs", "s", "m", "l", "xl"],
+        "color_combinations": {"Сырая": ["white"]},
+        "url": "https://www.zara.com/es/es/abrigo-textura-bolsillos-p02549787.html?v1=93852927&v2=1765268",
+        "images": [
+            "https://storage.googleapis.com/gidstuff_product_images/2549787712_1_1_1.jpg",
+            "https://storage.googleapis.com/gidstuff_product_images/2549787712_2_1_1.jpg",
+            "https://storage.googleapis.com/gidstuff_product_images/2549787712_2_2_1.jpg",
+            "https://storage.googleapis.com/gidstuff_product_images/2549787712_2_3_1.jpg",
+            "https://storage.googleapis.com/gidstuff_product_images/2549787712_2_4_1.jpg",
+            "https://storage.googleapis.com/gidstuff_product_images/2549787712_2_5_1.jpg",
+            "https://storage.googleapis.com/gidstuff_product_images/2549787712_6_1_1.jpg",
+            "https://storage.googleapis.com/gidstuff_product_images/2549787712_6_3_1.jpg"
+        ],
+        "category": "пальто",
+        "materials": {"полиэстер": 37, "хлопок": 31, "акрил": 23, "вискоза": 8, "другие волокна": 1},
+        "in_stock": true,
+        "uah_price": 2173.89
+    },
+    {
+        "id": 3,
+        "name": "ПАЛЬТО ОВЕРСАЙЗ, LIMITED EDITION",
+        "description": "ШИРОКОЕ ПАЛЬТО С ЛАМПОЧКОЙ С ШЕЕЙ И ДЛИННЫМ РУКАВОМ. КАРМАНЫ В ПЕРЕДНЕМ. НИЗКИЙ С ОТКРЫТИЕМ СПИНКИ. ПЕРЕДНЕЕ ЗАКРЫТИЕ С КНОПКАМИ.",
+        "sizes": ["xs-s", "m-l"],
+        "color_combinations": {"Raw / Green": ["raw", "green"]},
+        "url": "https://www.zara.com/es/es/abrigo-oversize-cuadros-limited-edition-p02688473.html?v1=97295422&v2=1765268",
+        "images": [
+            "https://storage.googleapis.com/gidstuff_product_images/2688473069_1_1_1.jpg",
+            "https://storage.googleapis.com/gidstuff_product_images/2688473069_2_1_1.jpg",
+            "https://storage.googleapis.com/gidstuff_product_images/2688473069_2_2_1.jpg",
+            "https://storage.googleapis.com/gidstuff_product_images/2688473069_2_3_1.jpg",
+            "https://storage.googleapis.com/gidstuff_product_images/2688473069_2_4_1.jpg",
+            "https://storage.googleapis.com/gidstuff_product_images/2688473069_2_5_1.jpg",
+            "https://storage.googleapis.com/gidstuff_product_images/2688473069_2_6_1.jpg",
+            "https://storage.googleapis.com/gidstuff_product_images/2688473069_2_7_1.jpg",
+            "https://storage.googleapis.com/gidstuff_product_images/2688473069_6_1_1.jpg",
+            "https://storage.googleapis.com/gidstuff_product_images/2688473069_6_2_1.jpg"
+
+        ],
+        "category": "пальто",
+        "materials": {"джут": 50, "вискоза": 50},
+        "in_stock": true,
+        "uah_price": 3294.62
+    },
+    {
+        "id": 4,
+        "name": "ПОПЛИН МИДИ ПАНЕЛИ",
+        "description": "ПЛАТЬЕ С КРУГЛЫМ ВЫРЕЗОМ И КОРОТКИЙ РУКАВ ABULLON, ОТДЕЛЕННЫЙ ЭЛАСТИЧНОЙ ОТДЕЛКОЙ. СКРЫТЫЕ БОКОВЫЕ КАРМАНЫ В ШИТЬЕ. ДЕТАЛЬ ТКАНИ ТИПА ПЧЕЛОВАЯ КОМБИНИРОВАННАЯ В ТОН. НАЗАД ЗАКРЫТИЕ С ОТКРЫТИЕМ И ЛАЗАМИ.",
+        "sizes": ["xs", "s", "m", "l", "xl", "xxl"],
+        "color_combinations": {"White": ["white"]},
+        "url": "https://www.zara.com/es/es/vestido-midi-popel%C3%ADn-paneles-p02566049.html?v1=101169157&v2=1765268",
+        "images": [
+            "https://storage.googleapis.com/gidstuff_product_images/2566049250_1_1_1.jpg",
+            "https://storage.googleapis.com/gidstuff_product_images/2566049250_2_1_1.jpg",
+            "https://storage.googleapis.com/gidstuff_product_images/2566049250_2_2_1.jpg",
+            "https://storage.googleapis.com/gidstuff_product_images/2566049250_2_3_1.jpg",
+            "https://storage.googleapis.com/gidstuff_product_images/2566049250_2_4_1.jpg",
+            "https://storage.googleapis.com/gidstuff_product_images/2566049250_2_5_1.jpg",
+            "https://storage.googleapis.com/gidstuff_product_images/2566049250_6_1_1.jpg",
+            "https://storage.googleapis.com/gidstuff_product_images/2566049250_6_2_1.jpg",
+            "https://storage.googleapis.com/gidstuff_product_images/2566049250_6_3_1.jpg"
+
+        ],
+        "category": "платье",
+        "materials": {"хлопок": 100},
+        "in_stock": true,
+        "uah_price": 987.23
+    },
+    {
+        "id": 5,
+        "name": "ВСТРОЕННЫЕ КНОПКИ ПИДЖАКА",
+        "description": "СПОРТИВНЫЙ ПИДЖАК С ПЕТЛЕВОЙ ВЫРЕЗКОЙ И ДЛИННЫМИ РУКАВАМИ. КАРМАНЫ С КРЫШКОЙ ВПЕРЕД. НИЗКИЙ С ОТКРЫТИЕМ СПИНКИ. ПЕРЕДНЕЕ ЗАКРЫТИЕ С МЕТАЛЛИЧЕСКИМИ КНОПКАМИ.",
+        "sizes": ["xs", "s", "m", "l", "xl", "xxl"],
+        "color_combinations": {"Navy": ["blue"]},
+        "url": "https://www.zara.com/es/es/blazer-entallada-botones-p08255703.html?v1=99423572&v2=1765268",
+        "images": [
+            "https://storage.googleapis.com/gidstuff_product_images/8255703401_1_1_1.jpg",
+            "https://storage.googleapis.com/gidstuff_product_images/8255703401_2_1_1.jpg",
+            "https://storage.googleapis.com/gidstuff_product_images/8255703401_2_2_1.jpg",
+            "https://storage.googleapis.com/gidstuff_product_images/8255703401_2_3_1.jpg",
+            "https://storage.googleapis.com/gidstuff_product_images/8255703401_6_1_1.jpg",
+            "https://storage.googleapis.com/gidstuff_product_images/8255703401_6_2_1.jpg",
+            "https://storage.googleapis.com/gidstuff_product_images/8255703401_6_3_1.jpg"
+        ],
+        "category": "пиджак",
+        "materials": {"полиэстер": 54, "вискоза": 43, "эластан": 3},
+        "in_stock": true,
+        "uah_price": 2635.37
+    },
+    {
+        "id": 6,
+        "name": "Толстовка с капюшоном на молнии",
+        "description": "Худи на молнии до щиколотки из мягкой ткани свитшота из смесового хлопка. Двухслойный капюшон на кулиске, двухсторонняя молния спереди, неброские карманы в боковых швах и разрезы по бокам. Мягкая щеточка внутри.",
+        "sizes": ["xs", "s", "m", "l", "xl", "xxl"],
+        "color_combinations": {"Светло-серый": ["grey"]},
+        "url": "https://www2.hm.com/en_gb/productpage.0983928001.html",
+        "images": [
+            "https://storage.googleapis.com/gidstuff_product_images/hmgoepprod.jpeg",
+            "https://storage.googleapis.com/gidstuff_product_images/hmgoepprod-2.jpeg",
+            "https://storage.googleapis.com/gidstuff_product_images/hmgoepprod-3.jpeg",
+            "https://storage.googleapis.com/gidstuff_product_images/hmgoepprod-4.jpeg",
+            "https://storage.googleapis.com/gidstuff_product_images/hmgoepprod-5.jpeg"
+        ],
+        "category": "толстовка",
+        "materials": {"полиэстер": 40, "хлопок": 60},
+        "in_stock": true,
+        "uah_price": 823.74
+    },
+    {
+        "id": 7,
+        "name": "Байкерская куртка",
+        "description": "Классическая байкерская куртка с диагональной молнией спереди и прорезными лацканами с декоративными кнопками. Передний карман на молнии, узкий накладной карман с клапаном на кнопке спереди и неброские боковые карманы. Ремень с металлической пряжкой по низу и молнией на манжетах. Подкладка из тафты из переработанного полиэстера.",
+        "sizes": ["xs", "s", "xl", "xxl"],
+        "color_combinations": {"Чёрный": ["black"]},
+        "url": "https://www2.hm.com/en_gb/productpage.0944704001.html",
+        "images": [
+            "https://storage.googleapis.com/gidstuff_product_images/hmgoepprod-6.jpeg",
+            "https://storage.googleapis.com/gidstuff_product_images/hmgoepprod-7.jpeg",
+            "https://storage.googleapis.com/gidstuff_product_images/hmgoepprod-8.jpeg",
+            "https://storage.googleapis.com/gidstuff_product_images/hmgoepprod-9.jpeg",
+            "https://storage.googleapis.com/gidstuff_product_images/hmgoepprod-10.jpeg",
+            "https://storage.googleapis.com/gidstuff_product_images/hmgoepprod-11.jpeg",
+            "https://storage.googleapis.com/gidstuff_product_images/hmgoepprod-12.jpeg"
+        ],
+        "category": "куртка",
+        "materials": {"кожа": 100},
+        "in_stock": true,
+        "uah_price": 3955.20
+    },
+    {
+        "id": 8,
+        "name": "Джинсовая куртка оверсайз",
+        "description": "Пиджак оверсайз из стираного хлопкового денима с воротником, пуговицами спереди, заниженными плечами и длинными рукавами с манжетами на пуговицах. Нагрудные карманы с клапаном на пуговице, неброские боковые карманы и петля с регулируемой пуговицей по бокам подола. Часть хлопка, из которого изготовлена куртка, перерабатывается.",
+        "sizes": ["xs", "s", "m", "l", "xl", "xxl"],
+        "color_combinations": {"Джинсово синий": ["blue"]},
+        "url": "https://www2.hm.com/en_gb/productpage.0944709001.html",
+        "images": [
+            "https://storage.googleapis.com/gidstuff_product_images/hmgoepprod-13.jpeg",
+            "https://storage.googleapis.com/gidstuff_product_images/hmgoepprod-14.jpeg",
+            "https://storage.googleapis.com/gidstuff_product_images/hmgoepprod-15.jpeg",
+            "https://storage.googleapis.com/gidstuff_product_images/hmgoepprod-16.jpeg",
+            "https://storage.googleapis.com/gidstuff_product_images/hmgoepprod-17.jpeg",
+            "https://storage.googleapis.com/gidstuff_product_images/hmgoepprod-18.jpeg"
+        ],
+        "category": "куртка",
+        "materials": {"хлопок": 100},
+        "in_stock": true,
+        "uah_price": 1153.37
+    },
+    {
+        "id": 9,
+        "name": "СВОБОДНЫЕ ЖЕНСКИЕ ДЖИНСЫ С УЛЬТРАШИВЫМИ НОГАМИ",
+        "description": "Получите крутой и непринужденный образ с этим стилем возврата. Это современный взгляд на непринужденные винтажные джинсы Levi's® с привлекательными широкими штанинами. Предназначен для ношения ниже естественной талии с сложенным подолом, где ткань собирается немного выше вашей обуви.\nСовременная свободная посадка\nРазбегающие широкие штанины",
+        "sizes": ["m", "s"],
+        "color_combinations": {"Темная стирка": ["blue", "dark"], "Cветлая стирка": ["blue", "light"]},
+        "url": "https://www.levi.com/US/en_US/apparel/clothing/bottoms/loose-ultra-wide-leg-womens-jeans/p/527840005",
+        "images": [
+            "https://storage.googleapis.com/gidstuff_product_images/527840005-front-pdp.jpeg",
+            "https://storage.googleapis.com/gidstuff_product_images/527840005-back-pdp.jpeg"
+        ],
+        "category": "джинсы",
+        "materials": {"хлопок": 79, "лиоцелл": 21},
+        "in_stock": true,
+        "uah_price": 2273.77
+    },
+    {
+        "id": 10,
+        "name": "ВЫСОКИЕ СВОБОДНЫЕ БРЮКИ ПЛИССИРОВАННЫЕ",
+        "description": "Имя говорит само за себя. Мы взяли винтажный крой с высокой посадкой и свободным покроем и переосмыслили его на сегодняшний день. Мы наделили эту пару классическим стилем хаки с универсальным твилом и складками.\nСовременная интерпретация классического стиля 90-х.\nОтличается свободными штанинами и привлекательной высокой посадкой.\nСделаны складками для изысканной эстетики в мужском стиле.\nПредназначен для можно носить сложенными по подолу\nПоказано здесь с шляпой-ведром",
+        "sizes": ["xs", "s", "m", "l", "xl"],
+        "color_combinations": {"Хаки": ["khaki"], "Зелёный": ["green"]},
+        "url": "https://www.levi.com/US/en_US/apparel/clothing/bottoms/pleated-high-loose-pants/p/368870000",
+        "images": [
+            "https://storage.googleapis.com/gidstuff_product_images/368870000-back-pdp.jpeg",
+            "https://storage.googleapis.com/gidstuff_product_images/368870000-front-pdp.jpeg",
+            "https://storage.googleapis.com/gidstuff_product_images/368870000-side-pdp.jpeg"
+        ],
+        "category": "штаны",
+        "materials": {"хлопок": 100},
+        "in_stock": true,
+        "uah_price": 1812.29
+    },
+    {
+        "id": 11,
+        "name": "ТОЛСТОВКА НА МОЛНИИ",
+        "description": "Толстовка из хлопка стрейч. Высокий вырез. Длинные рукава. Облегающая форма. Застежка-молния.",
+        "sizes": ["xs", "s", "xl"],
+        "color_combinations": {"Чёрный": ["black"]},
+        "url": "https://www.guess.eu/en-ua/guess/women/outlet/tops/zip-fastening-sweatshirt-black/Q0BQ07RA1E1-JBLK.html",
+        "images": [
+            "https://storage.googleapis.com/gidstuff_product_images/Q0BQ07RA1E1-JBLK.jpeg",
+            "https://storage.googleapis.com/gidstuff_product_images/Q0BQ07RA1E1-JBLK-ALT1.jpeg"
+        ],
+        "category": "свитшот",
+        "materials": null,
+        "in_stock": false,
+        "uah_price": null
+    }
+]

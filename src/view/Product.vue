@@ -2,11 +2,7 @@
   <main>
     <section class="product d-flex space-between container">
       <div class="product__img-wrapper">
-        <img class="product__img" src="/images/product/1/1.jpg" alt="1.jpg" />
-        <img class="product__img" src="/images/product/1/2.jpg" alt="2.jpg" />
-        <img class="product__img" src="/images/product/1/3.jpg" alt="3.jpg" />
-        <img class="product__img" src="/images/product/1/4.jpg" alt="4.jpg" />
-        <img class="product__img" src="/images/product/1/5.jpg" alt="5.jpg" />
+        <img v-for="(image, index) in product.images" :key="index" class="product__img" :src="image" alt="image" />
       </div>
       <div class="product__top">
         <div class="product__pages d-flex space-between">
@@ -86,124 +82,24 @@
       <div class="product__info">
         <form class="product__form" action="#">
           <div class="product__brand">Zara</div>
-          <h3 class="product__name">Трикотажное платье мини</h3>
+          <h3 class="product__name">{{ product.name }}</h3>
           <div class="product__availability d-flex">
             Код товара: <span class="product__availability--cod">12314125</span>
             <span class="product__availability--check">В наличии</span>
           </div>
           <div class="product__color">
-            Цвет: <span class="product__color--name">Красный</span>
-            <div class="product__color-links">
-              <div class="product__color-wrapper">
+            Цвета: <span class="product__color--name"></span>
+            <div class="product__color-links" v-for="(colors, index) of product.color_combinations" :key="index">
+              <div 
+                class="product__color-wrapper"
+                v-for="color in colors"
+                :key="color"
+              >
                 <div
-                  class="product__color-link product__color-link--red1"
+                  :class="`product__color-link product__color-link--${color}`"
                 ></div>
               </div>
-              <div class="product__color-wrapper">
-                <div
-                  class="product__color-link product__color-link--gold"
-                ></div>
-              </div>
-              <div class="product__color-wrapper">
-                <div
-                  class="product__color-link product__color-link--yelow"
-                ></div>
-              </div>
-              <div class="product__color-wrapper">
-                <div
-                  class="product__color-link product__color-link--green"
-                ></div>
-              </div>
-              <div class="product__color-wrapper">
-                <div
-                  class="product__color-link product__color-link--blue"
-                ></div>
-              </div>
-              <div class="product__color-wrapper">
-                <div
-                  class="product__color-link product__color-link--light-blue"
-                ></div>
-              </div>
-              <div class="product__color-wrapper">
-                <div
-                  class="product__color-link product__color-link--black"
-                ></div>
-              </div>
-              <div class="product__color-wrapper">
-                <div
-                  class="product__color-link product__color-link--red1"
-                ></div>
-              </div>
-              <div class="product__color-wrapper">
-                <div
-                  class="product__color-link product__color-link--gold"
-                ></div>
-              </div>
-              <div class="product__color-wrapper">
-                <div
-                  class="product__color-link product__color-link--yelow"
-                ></div>
-              </div>
-              <div class="product__color-wrapper">
-                <div
-                  class="product__color-link product__color-link--green"
-                ></div>
-              </div>
-              <div class="product__color-wrapper">
-                <div
-                  class="product__color-link product__color-link--blue"
-                ></div>
-              </div>
-              <div class="product__color-wrapper">
-                <div
-                  class="product__color-link product__color-link--light-blue"
-                ></div>
-              </div>
-              <div class="product__color-wrapper">
-                <div
-                  class="product__color-link product__color-link--black"
-                ></div>
-              </div>
-              <div class="product__color-wrapper">
-                <div
-                  class="product__color-link product__color-link--red1"
-                ></div>
-              </div>
-              <div class="product__color-wrapper">
-                <div
-                  class="product__color-link product__color-link--gold"
-                ></div>
-              </div>
-              <div class="product__color-wrapper">
-                <div
-                  class="product__color-link product__color-link--yelow"
-                ></div>
-              </div>
-              <div class="product__color-wrapper">
-                <div
-                  class="product__color-link product__color-link--green"
-                ></div>
-              </div>
-              <div class="product__color-wrapper">
-                <div
-                  class="product__color-link product__color-link--blue"
-                ></div>
-              </div>
-              <div class="product__color-wrapper">
-                <div
-                  class="product__color-link product__color-link--light-blue"
-                ></div>
-              </div>
-              <div class="product__color-wrapper">
-                <div
-                  class="product__color-link product__color-link--black"
-                ></div>
-              </div>
-              <div class="product__color-wrapper">
-                <div
-                  class="product__color-link product__color-link--yelow"
-                ></div>
-              </div>
+              
             </div>
             <div class="product__color-slider">
               <div class="product__color-item">
@@ -269,12 +165,7 @@
               <span class="product__size-text">Выбери размер</span>
               <select class="product__size-choice custom-select" name="size">
                 <option value="Не выбрано" selected>Не выбрано</option>
-                <option value="s">s</option>
-                <option value="m">m</option>
-                <option value="l">l</option>
-                <option value="xl">xl</option>
-                <option value="xxl">xxl</option>
-                <option value="xxxl">xxxl</option>
+                <option v-for="size in product.sizes" :value="size" :key="size">{{ size }}</option>
               </select>
             </label>
             <a href="#" class="product__size-link">
@@ -294,9 +185,9 @@
             </a>
           </div>
           <div class="product__price">
-            <span class="product__price-now">3 999 &#8372;</span>
-            <span class="product__old-price">4500 &#8372;</span>
-            <span class="product__sale">-10%</span>
+            <span class="product__price-now">{{ product.uah_price }} &#8372;</span>
+            <!-- <span class="product__old-price">4500 &#8372;</span>
+            <span class="product__sale">-10%</span> -->
           </div>
 
           <button 
@@ -345,7 +236,24 @@
     </section>
     <div class="recent container">
       <h3 class="recent__title">Дополните свой образ</h3>
-      <div class="recent__slider">
+      <VueSlickCarousel
+        v-bind="{
+          autoplay: true,
+          slidesToShow: 4,
+          touchMove: true,
+          dots: false,
+          arrows: true,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                arrows: false,
+              },
+            },
+          ],
+        }"
+        class="recent__slider container"
+      >
         <div class="product-card d-flex">
           <div class="product-card__inner">
             <img
@@ -581,11 +489,28 @@
             </div>
           </div>
         </div>
-      </div>
+      </VueSlickCarousel>
     </div>
     <div class="recent container">
       <h3 class="recent__title">Вы смотрели</h3>
-      <div class="recent__slider">
+      <VueSlickCarousel
+        v-bind="{
+          autoplay: true,
+          slidesToShow: 4,
+          touchMove: true,
+          dots: false,
+          arrows: true,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                arrows: false,
+              },
+            },
+          ],
+        }"
+        class="recent__slider container"
+      >
         <div class="product-card d-flex">
           <div class="product-card__inner">
             <img
@@ -778,7 +703,7 @@
           <div class="product-card__inner">
             <img
               class="product-card__img"
-              src="/images/product/4.jpg"
+              src="/images/product/3.jpg"
               alt="Классическое пальто"
             />
             <a class="product-card__brand" href="#">Bershka</a>
@@ -821,34 +746,30 @@
             </div>
           </div>
         </div>
-      </div>
+      </VueSlickCarousel>
     </div>
   </main>
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import VueSlickCarousel from "vue-slick-carousel";
+import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 import { mapMutations } from 'vuex'
 
 export default {
-  props: {
-    id: {
-      type: Number,
-      default: 1
+  props: ['id'],
+  computed: {
+    product() {
+      return this.$store.state.Products.products.find(product => String(product.id) === String(this.id))
     }
   },
-  computed: mapState({
-    products: state => state.Products.products,
-    product() {
-      return this.products.find(product => product.id === this.id)
-    }
-  }),
+  components: { VueSlickCarousel },
   created() {
-
   },
   methods: {
     ...mapMutations([
       'ADD_PRODUCT',
+      'DELETE_PRODUCT'
     ]),
     addProduct () {
       this.ADD_PRODUCT(this.product)
