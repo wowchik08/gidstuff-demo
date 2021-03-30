@@ -86,7 +86,7 @@
               <use xlink:href="@/assets/images/all-svg.svg#cart"></use>
             </svg>
           </button>
-          <span class="header__cart-num">(2)</span>
+          <span class="header__cart-num"><span v-show="cart.length">({{cart.length}})</span></span>
         </div>
       </div>
       <div class="header__nav-sub d-flex space-between">
@@ -142,6 +142,7 @@
 
 <script>
 import TheCart from "@/components/TheCart";
+import { mapState } from "vuex";
 
 export default {
   data () {
@@ -152,6 +153,9 @@ export default {
   components: {
     TheCart
   },
+  computed: mapState({
+    cart: (state) => state.Cart.cart,
+  }),
   methods: {
     showCart () {
       this.isCart = true

@@ -1,14 +1,8 @@
 <template>
-  <div 
-    class="cart"
-    :class="{ 'cart--active': stateCart }"
-  >
+  <div class="cart" :class="{ 'cart--active': stateCart }">
     <div class="cart__inner d-flex">
       <div class="cart__top d-flex">
-        <div 
-          class="cart__back"
-          @click="hiddenCart"
-        >
+        <div class="cart__back" @click="hiddenCart">
           <img
             class="cart__img"
             src="@/assets/images/top-slider/left.svg"
@@ -17,15 +11,16 @@
         </div>
         <p class="cart__title">
           корзина
-          <span class="cart__num">(2)</span>
+          <span class="cart__num">({{cart.length}})</span>
         </p>
       </div>
       <div class="cart__content">
-        <div 
+        <div
           class="product-show d-flex"
           v-for="product in cart"
           :key="product.id"
         >
+        <pre>{{product}}</pre>
           <div class="product-show__inner">
             <img
               class="product-show__img"
@@ -67,43 +62,48 @@
           итого:
           <span class="cart__total-price">7 998 &#8372;</span>
         </div>
-        <a class="cart__link" href="#">оформить заказ</a>
+        <a class="cart__link" @click="makeOrder"
+          >оформить заказ</a
+        >
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState } from "vuex";
 
 export default {
   props: {
     isCart: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
-  data () {
+  data() {
     return {
-      stateCart: this.isCart
-    }
+      stateCart: this.isCart,
+    };
   },
   computed: mapState({
-    cart: state => state.Cart.cart,
+    cart: (state) => state.Cart.cart,
   }),
   watch: {
-    isCart () {
-      this.stateCart = this.isCart
-    }
+    isCart() {
+      this.stateCart = this.isCart;
+    },
   },
   methods: {
-    hiddenCart () {
-      this.$emit('hiddenCart')
-    }
-  }
-}
+    hiddenCart() {
+      this.$emit("hiddenCart");
+    },
+    makeOrder() {
+      this.hiddenCart();
+      this.$router.push({ name: "Order" });
+    },
+  },
+};
 </script>
 
 <style>
-
 </style>
