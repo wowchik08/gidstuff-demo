@@ -2,7 +2,7 @@
   <main>
     <section class="order container">
       <div class="d-flex">
-        <form action="#" class="order__form">
+        <form @submit.prevent="makeOrder" class="order__form">
           <h2 class="order__title">Оформление заказа</h2>
           <div class="order__your-contact">
             <p class="order__form-title">Ваши контактные данные</p>
@@ -20,7 +20,7 @@
             </div>
             <div class="custom-input order__form-name">
               <input
-                type="email"
+                type="text"
                 class="custom-input__input"
                 id="my-name"
                 placeholder=" "
@@ -30,7 +30,7 @@
             </div>
             <div class="custom-input order__form-surname">
               <input
-                type="email"
+                type="text"
                 class="custom-input__input"
                 id="my-surname"
                 placeholder="  "
@@ -58,7 +58,7 @@
               <span class="order__info-delivery">7-10 дней</span>
               <span class="order__info-total">
                 на сумму:
-                <span class="order__info-total-price"> 4 199 &#8372; </span>
+                <span class="order__info-total-price"> {{ TOTAL_PRICE }} &#8372; </span>
               </span>
             </div>
             <div 
@@ -158,12 +158,12 @@
                   />
                   <span class="order__method-name">Курьер, Новая Почта</span>
                   <span class="order__delivery-date">07.12.2020</span>
-                  <span class="order__delivery-cost">100 &#8372;</span>
+                  <span class="order__delivery-cost">{{ delivery }} &#8372;</span>
                 </label>
                 <div class="order__new-post-courier-inner d-flex">
                   <div class="custom-input order__courier-street">
                     <input
-                      type="email"
+                      type="text"
                       class="custom-input__input"
                       id="street"
                       placeholder=" "
@@ -175,7 +175,7 @@
                   </div>
                   <div class="custom-input order__courier-home">
                     <input
-                      type="email"
+                      type="text"
                       class="custom-input__input"
                       id="home"
                       placeholder=" "
@@ -187,7 +187,7 @@
                   </div>
                   <div class="custom-input order__courier-room">
                     <input
-                      type="email"
+                      type="text"
                       class="custom-input__input"
                       id="room"
                       placeholder=" "
@@ -211,7 +211,7 @@
                     >Отделение, Новая Почта
                   </span>
                   <span class="order__delivery-date">07.12.2020</span>
-                  <span class="order__delivery-cost">100 &#8372;</span>
+                  <span class="order__delivery-cost">{{ delivery }} &#8372;</span>
                 </label>
               </div>
             </div>
@@ -254,14 +254,14 @@
               <li class="order__list-title">Итого</li>
               <li class="order__item d-flex space-between">
                 2 товара на сумму:
-                <span class="order__product-total">2 100 ₴</span>
+                <span class="order__product-total">{{ TOTAL_PRICE }} ₴</span>
               </li>
               <li class="order__item d-flex space-between">
                 Стоимость доставки:
-                <span class="order__delivery-total">2 100 ₴</span>
+                <span class="order__delivery-total">{{ delivery }} ₴</span>
               </li>
               <li class="order__item d-flex space-between">
-                К оплате: <span class="order__cost-total">2 200 ₴</span>
+                К оплате: <span class="order__cost-total">{{ priceWithDelivery }} ₴</span>
               </li>
             </ul>
           </div>
@@ -293,7 +293,7 @@
           <div class="order__btn-wrapper d-flex">
             <button class="order__btn">Оформить заказ</button>
             <div class="order__total">
-              К оплате: <span class="order__total-price">2 200 ₴</span>
+              К оплате: <span class="order__total-price">{{ priceWithDelivery }} ₴</span>
             </div>
           </div>
         </form>
@@ -303,17 +303,17 @@
               <li class="order__list-title">Итого</li>
               <li class="order__item d-flex space-between">
                 2 товара на сумму:
-                <span class="order__product-total">2 100 ₴</span>
+                <span class="order__product-total">{{ TOTAL_PRICE }} ₴</span>
               </li>
               <li class="order__item d-flex space-between">
                 Стоимость доставки:
-                <span class="order__delivery-total">2 100 ₴</span>
+                <span class="order__delivery-total">{{ delivery }} ₴</span>
               </li>
               <li class="order__item d-flex space-between">
-                К оплате: <span class="order__cost-total">2 200 ₴</span>
+                К оплате: <span class="order__cost-total">{{ priceWithDelivery }} ₴</span>
               </li>
             </ul>
-            <button class="order__btn">Оформить заказ</button>
+            <button @click="makeOrder" class="order__btn">Оформить заказ</button>
             <p class="order__text">
               Подтверждая заказ, я принимаю условия
               <a href="#" class="order__text-link"
@@ -333,22 +333,28 @@ import { mapGetters } from 'vuex';
 import { mapMutations } from 'vuex'
 
 export default {
+  data () {
+    return {
+      delivery: 100
+    }
+  },
   computed: {
     ...mapState({
       cart: (state) => state.Cart.cart,
     }),
     ...mapGetters([
       'TOTAL_PRICE'
-    ])
+    ]),
+    priceWithDelivery () {
+      return this.TOTAL_PRICE + this.delivery
+    }
   },
   methods: {
     ...mapMutations([
       'DELETE_PRODUCT'
     ]),
     makeOrder() {
-      if(this.cart.length) {
-        this.$router.push({ name: "Order" });
-      }
+      this.$router.push({ name: "OrderSuccess" });
     },
     deleteProduct(id) {
       this.DELETE_PRODUCT(id)
