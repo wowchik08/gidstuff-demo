@@ -1,4 +1,3 @@
-// import productsData from '../mock/products'
 import productsData from '../mock/test_products_ru.json'
 
 export default {
@@ -12,7 +11,6 @@ export default {
   },
   actions: {
     async LOAD_PRODUCTS({ commit }) {
-      console.log('productsData', productsData)
        const products = productsData
        commit("SET_PRODUCTS", products);
     }
