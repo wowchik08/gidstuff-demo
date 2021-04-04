@@ -2,82 +2,13 @@
   <main>
     <section class="product d-flex space-between container">
       <div class="product__img-wrapper">
-        <img v-for="(image, index) in product.images" :key="index" class="product__img" :src="image" alt="image" />
-      </div>
-      <div class="product__top">
-        <div class="product__pages d-flex space-between">
-          <div class="product__prev-page d-flex">
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M6.17001 7.99992L11.3335 2.30451L10.453 1.33325L4.8492 7.51429C4.60604 7.78249 4.60604 8.21734 4.8492 8.48555L10.453 14.6666L11.3335 13.6953L6.17001 7.99992Z"
-                fill="black"
-              />
-            </svg>
-            Предыдущий товар
-          </div>
-          <div class="product__next-page d-flex">
-            Следующий товар
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M9.82999 7.99992L4.6665 2.30451L5.54705 1.33325L11.1508 7.51429C11.394 7.78249 11.394 8.21734 11.1508 8.48555L5.54705 14.6666L4.6665 13.6953L9.82999 7.99992Z"
-                fill="black"
-              />
-            </svg>
-          </div>
-        </div>
-        <div class="product__top-slider">
-          <div class="product__top-item">
-            <img
-              class="product__top-img"
-              src="/images/product/1/1.jpg"
-              alt=""
-            />
-          </div>
-          <div class="product__top-item">
-            <img
-              class="product__top-img"
-              src="/images/product/1/2.jpg"
-              alt=""
-            />
-          </div>
-          <div class="product__top-item">
-            <img
-              class="product__top-img"
-              src="/images/product/1/3.jpg"
-              alt=""
-            />
-          </div>
-          <div class="product__top-item">
-            <img
-              class="product__top-img"
-              src="/images/product/1/4.jpg"
-              alt=""
-            />
-          </div>
-          <div class="product__top-item">
-            <img
-              class="product__top-img"
-              src="/images/product/1/5.jpg"
-              alt=""
-            />
-          </div>
-        </div>
+        <img
+          v-for="(image, index) in product.images"
+          :key="index"
+          class="product__img"
+          :src="image"
+          alt="image"
+        />
       </div>
       <div class="product__info">
         <form class="product__form" action="#">
@@ -89,8 +20,12 @@
           </div>
           <div class="product__color">
             Цвета: <span class="product__color--name"></span>
-            <div class="product__color-links" v-for="(colors, index) of product.color_combinations" :key="index">
-              <div 
+            <div
+              class="product__color-links"
+              v-for="(colors, index) of product.color_combinations"
+              :key="index"
+            >
+              <div
                 class="product__color-wrapper"
                 v-for="color in colors"
                 :key="color"
@@ -99,76 +34,26 @@
                   :class="`product__color-link product__color-link--${color}`"
                 ></div>
               </div>
-              
-            </div>
-            <div class="product__color-slider">
-              <div class="product__color-item">
-                <img
-                  class="product__color-img"
-                  src="/images/product/1.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="product__color-item">
-                <img
-                  class="product__color-img"
-                  src="/images/product/2.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="product__color-item">
-                <img
-                  class="product__color-img"
-                  src="/images/product/3.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="product__color-item">
-                <img
-                  class="product__color-img"
-                  src="/images/product/4.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="product__color-item">
-                <img
-                  class="product__color-img"
-                  src="/images/product/1.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="product__color-item">
-                <img
-                  class="product__color-img"
-                  src="/images/product/2.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="product__color-item">
-                <img
-                  class="product__color-img"
-                  src="/images/product/3.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="product__color-item">
-                <img
-                  class="product__color-img"
-                  src="/images/product/4.jpg"
-                  alt=""
-                />
-              </div>
             </div>
           </div>
           <div class="product__size d-flex">
             <label>
               <span class="product__size-text">Выбери размер</span>
-              <select class="product__size-choice custom-select" name="size">
-                <option value="Не выбрано" selected>Не выбрано</option>
-                <option v-for="size in product.sizes" :value="size" :key="size">{{ size }}</option>
+              <select
+                class="product__size-choice custom-select"
+                name="size"
+                v-model="productSize"
+              >
+                <option
+                  v-for="size in product.sizes"
+                  :value="size"
+                  :key="size"
+                >
+                  {{ size }}
+                </option>
               </select>
             </label>
-            <a href="#" class="product__size-link">
+            <a class="product__size-link">
               <svg
                 width="20"
                 height="20"
@@ -185,16 +70,20 @@
             </a>
           </div>
           <div class="product__price">
-            <span class="product__price-now">{{ product.uah_price }} &#8372;</span>
+            <span class="product__price-now"
+              >{{ product.uah_price }} &#8372;</span
+            >
             <!-- <span class="product__old-price">4500 &#8372;</span>
             <span class="product__sale">-10%</span> -->
           </div>
 
-          <button 
-            class="product__btn" 
+          <button
+            class="product__btn"
             type="submit"
             @click.prevent="addProduct"
-          >В корзину</button>
+          >
+            В корзину
+          </button>
         </form>
         <div class="product__delivery d-flex space-between">
           <span class="product__delivery-timing"> 7-10 дней </span>
@@ -754,27 +643,33 @@
 <script>
 import VueSlickCarousel from "vue-slick-carousel";
 import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
-import { mapMutations } from 'vuex'
+import { mapMutations } from "vuex";
 
 export default {
-  props: ['id'],
+  name: "ProductInner",
+  props: ["id"],
+  components: { VueSlickCarousel },
   computed: {
     product() {
-      return this.$store.state.Products.products.find(product => String(product.id) === String(this.id))
-    }
+      return this.$store.state.Products.products.find(
+        (product) => String(product.id) === String(this.id)
+      );
+    },
   },
-  components: { VueSlickCarousel },
-  created() {
+  mounted(){
+    this.productSize = this.product.sizes[0];
+  },
+  data() {
+    return {
+      productSize: null,
+    };
   },
   methods: {
-    ...mapMutations([
-      'ADD_PRODUCT',
-      'DELETE_PRODUCT'
-    ]),
-    addProduct () {
-      this.ADD_PRODUCT(this.product)
-    }
-  }
+    ...mapMutations(["ADD_PRODUCT", "DELETE_PRODUCT"]),
+    addProduct() {
+      this.ADD_PRODUCT({ ...this.product, ...{ size: this.productSize } });
+    },
+  },
 };
 </script>
 

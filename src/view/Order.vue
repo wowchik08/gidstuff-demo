@@ -11,10 +11,13 @@
                 type="tel"
                 class="custom-input__input order__form--tel"
                 id="my-tel"
-                placeholder=" "
+                placeholder=""
+                minlength="10"
+                maxlegnth="13"
+                pattern="^\+?3?8?(0\d{9})$"
                 required
               />
-              <label class="custom-input__placeholder" for="tel"
+              <label class="custom-input__placeholder" for="my-tel"
                 >Контактный телефон</label
               >
             </div>
@@ -23,7 +26,8 @@
                 type="text"
                 class="custom-input__input"
                 id="my-name"
-                placeholder=" "
+                placeholder=""
+                minlength="2"
                 required
               />
               <label class="custom-input__placeholder" for="my-name">Имя</label>
@@ -33,7 +37,8 @@
                 type="text"
                 class="custom-input__input"
                 id="my-surname"
-                placeholder="  "
+                placeholder=""
+                minlength="2"
                 required
               />
               <label class="custom-input__placeholder" for="my-surname"
@@ -58,21 +63,23 @@
               <span class="order__info-delivery">7-10 дней</span>
               <span class="order__info-total">
                 на сумму:
-                <span class="order__info-total-price"> {{ TOTAL_PRICE }} &#8372; </span>
+                <span class="order__info-total-price">
+                  {{ TOTAL_PRICE }} &#8372;
+                </span>
               </span>
             </div>
-            <div 
+            <div
               class="order-card d-flex"
               v-for="product in cart"
               :key="product.id"
             >
-              <button @click="deleteProduct(product.id)" type="button" class="order-card__delete"></button>
+              <button
+                @click="deleteProduct(product.id)"
+                type="button"
+                class="order-card__delete"
+              ></button>
               <div class="order-card__wrapper">
-                <img
-                  class="order-card__img"
-                  :src="product.images[0]"
-                  alt=""
-                />
+                <img class="order-card__img" :src="product.images[0]" alt="" />
               </div>
               <div class="order-card__info">
                 <span class="order-card__brand">Zara</span>
@@ -80,11 +87,7 @@
                 <div class="order-card__size-color d-flex">
                   <span class="order-card__size">
                     Размер:
-                    <span class="order-card__size-name"> L </span>
-                  </span>
-                  <span class="order-card__color">
-                    Цвет:
-                    <span class="order-card__color-name"> Фиолетовый </span>
+                    <span class="order-card__size-name">  {{ product.size }}</span>
                   </span>
                 </div>
               </div>
@@ -92,7 +95,9 @@
                 <input class="order-card__amount" type="number" value="1" />
               </div>
               <div class="order-card__price">
-                <span class="order-card__price-now">{{ product.uah_price }} &#8372;</span>
+                <span class="order-card__price-now"
+                  >{{ product.uah_price }} &#8372;</span
+                >
                 <!-- <span class="order-card__old-price">4500 &#8372;</span>
                 <span class="order-card__sale">-10%</span> -->
               </div>
@@ -158,7 +163,9 @@
                   />
                   <span class="order__method-name">Курьер, Новая Почта</span>
                   <span class="order__delivery-date">07.12.2020</span>
-                  <span class="order__delivery-cost">{{ delivery }} &#8372;</span>
+                  <span class="order__delivery-cost"
+                    >{{ delivery }} &#8372;</span
+                  >
                 </label>
                 <div class="order__new-post-courier-inner d-flex">
                   <div class="custom-input order__courier-street">
@@ -211,7 +218,9 @@
                     >Отделение, Новая Почта
                   </span>
                   <span class="order__delivery-date">07.12.2020</span>
-                  <span class="order__delivery-cost">{{ delivery }} &#8372;</span>
+                  <span class="order__delivery-cost"
+                    >{{ delivery }} &#8372;</span
+                  >
                 </label>
               </div>
             </div>
@@ -253,7 +262,7 @@
             <ul class="order__list">
               <li class="order__list-title">Итого</li>
               <li class="order__item d-flex space-between">
-                2 товара на сумму:
+                Товары на сумму:
                 <span class="order__product-total">{{ TOTAL_PRICE }} ₴</span>
               </li>
               <li class="order__item d-flex space-between">
@@ -261,7 +270,8 @@
                 <span class="order__delivery-total">{{ delivery }} ₴</span>
               </li>
               <li class="order__item d-flex space-between">
-                К оплате: <span class="order__cost-total">{{ priceWithDelivery }} ₴</span>
+                К оплате:
+                <span class="order__cost-total">{{ priceWithDelivery }} ₴</span>
               </li>
             </ul>
           </div>
@@ -293,7 +303,8 @@
           <div class="order__btn-wrapper d-flex">
             <button class="order__btn">Оформить заказ</button>
             <div class="order__total">
-              К оплате: <span class="order__total-price">{{ priceWithDelivery }} ₴</span>
+              К оплате:
+              <span class="order__total-price">{{ priceWithDelivery }} ₴</span>
             </div>
           </div>
         </form>
@@ -302,7 +313,7 @@
             <ul class="order__list">
               <li class="order__list-title">Итого</li>
               <li class="order__item d-flex space-between">
-                2 товара на сумму:
+                Товары на сумму:
                 <span class="order__product-total">{{ TOTAL_PRICE }} ₴</span>
               </li>
               <li class="order__item d-flex space-between">
@@ -310,10 +321,13 @@
                 <span class="order__delivery-total">{{ delivery }} ₴</span>
               </li>
               <li class="order__item d-flex space-between">
-                К оплате: <span class="order__cost-total">{{ priceWithDelivery }} ₴</span>
+                К оплате:
+                <span class="order__cost-total">{{ priceWithDelivery }} ₴</span>
               </li>
             </ul>
-            <button @click="makeOrder" class="order__btn">Оформить заказ</button>
+            <button @click="makeOrder" class="order__btn">
+              Оформить заказ
+            </button>
             <p class="order__text">
               Подтверждая заказ, я принимаю условия
               <a href="#" class="order__text-link"
@@ -329,37 +343,33 @@
 
 <script>
 import { mapState } from "vuex";
-import { mapGetters } from 'vuex';
-import { mapMutations } from 'vuex'
+import { mapGetters } from "vuex";
+import { mapMutations } from "vuex";
 
 export default {
-  data () {
+  data() {
     return {
-      delivery: 100
-    }
+      delivery: 100,
+    };
   },
   computed: {
     ...mapState({
       cart: (state) => state.Cart.cart,
     }),
-    ...mapGetters([
-      'TOTAL_PRICE'
-    ]),
-    priceWithDelivery () {
-      return this.TOTAL_PRICE + this.delivery
-    }
+    ...mapGetters(["TOTAL_PRICE"]),
+    priceWithDelivery() {
+      return this.TOTAL_PRICE + this.delivery;
+    },
   },
   methods: {
-    ...mapMutations([
-      'DELETE_PRODUCT'
-    ]),
+    ...mapMutations(["DELETE_PRODUCT"]),
     makeOrder() {
       this.$router.push({ name: "OrderSuccess" });
     },
     deleteProduct(id) {
-      this.DELETE_PRODUCT(id)
-    }
-  }
+      this.DELETE_PRODUCT(id);
+    },
+  },
 };
 </script>
 

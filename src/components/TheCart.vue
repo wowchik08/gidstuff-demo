@@ -11,7 +11,7 @@
         </div>
         <p class="cart__title">
           корзина
-          <span class="cart__num">({{cart.length}})</span>
+          <span class="cart__num">({{ cart.length }})</span>
         </p>
       </div>
       <div class="cart__content">
@@ -21,25 +21,25 @@
           :key="product.id"
         >
           <div class="product-show__inner">
-            <img
-              class="product-show__img"
-              :src="product.images[0]"
-              alt=""
-            />
+            <img class="product-show__img" :src="product.images[0]" alt="" />
           </div>
           <div class="product-show__info d-flex">
-            <button @click="deleteProduct(product.id)" type="button" class="product-show__delete"></button>
+            <button
+              @click="deleteProduct(product.id)"
+              type="button"
+              class="product-show__delete"
+            ></button>
             <h3 class="product-show__title">{{ product.name }}</h3>
             <div class="product-show__size-color d-flex">
               <div class="product-show__size">
-                Размер: <span class="product-show__size-name">L</span>
-              </div>
-              <div class="product-show__color">
-                Цвет: <span class="product-show__color-name">Фиолетовый</span>
+                Размер:
+                <span class="product-show__size-name">{{ product.size }}</span>
               </div>
             </div>
             <div class="product-show__price">
-              <span class="product-show__now-price">{{ product.uah_price }} &#8372; </span>
+              <span class="product-show__now-price"
+                >{{ product.uah_price }} &#8372;
+              </span>
               <!-- <span class="product-show__old-price"> 4500 &#8372; </span>
               <span class="product-show__sale">-10%</span> -->
             </div>
@@ -61,9 +61,7 @@
           итого:
           <span class="cart__total-price">{{ TOTAL_PRICE }} &#8372;</span>
         </div>
-        <a class="cart__link" @click="makeOrder"
-          >оформить заказ</a
-        >
+        <a class="cart__link" @click="makeOrder">оформить заказ</a>
       </div>
     </div>
   </div>
@@ -71,8 +69,8 @@
 
 <script>
 import { mapState } from "vuex";
-import { mapGetters } from 'vuex';
-import { mapMutations } from 'vuex'
+import { mapGetters } from "vuex";
+import { mapMutations } from "vuex";
 
 export default {
   props: {
@@ -88,11 +86,12 @@ export default {
   },
   computed: {
     ...mapState({
-      cart: (state) => state.Cart.cart,
+      cart: (state) => {
+        console.log(state.Cart.cart);
+        return state.Cart.cart;
+      },
     }),
-    ...mapGetters([
-      'TOTAL_PRICE'
-    ])
+    ...mapGetters(["TOTAL_PRICE"]),
   },
   watch: {
     isCart() {
@@ -100,21 +99,19 @@ export default {
     },
   },
   methods: {
-    ...mapMutations([
-      'DELETE_PRODUCT'
-    ]),
+    ...mapMutations(["DELETE_PRODUCT"]),
     hiddenCart() {
       this.$emit("hiddenCart");
     },
     makeOrder() {
       this.hiddenCart();
-      if(this.cart.length) {
+      if (this.cart.length) {
         this.$router.push({ name: "Order" });
       }
     },
     deleteProduct(id) {
-      this.DELETE_PRODUCT(id)
-    }
+      this.DELETE_PRODUCT(id);
+    },
   },
 };
 </script>

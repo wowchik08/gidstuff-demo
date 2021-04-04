@@ -1,21 +1,5 @@
 [
     {
-        "id": 1,
-        "name": "РЮКЗАК С ЛОГОТИПОМ",
-        "description": "Синтетический материал снаружи. Застежка-молния",
-        "sizes": ["s"],
-        "color_combinations": {"Коричневый": ["brown"]},
-        "url": "https://www.guess.eu/en-ua/guess/women/outlet/accessories/all-over-logo-backpack-brown/HWELENP1035-BRO.html",
-        "images": [
-            "https://storage.googleapis.com/gidstuff_product_images/HWELENP1035-BRO.jpeg",
-            "https://storage.googleapis.com/gidstuff_product_images/HWELENP1035-BRO-ALT1.jpeg"
-        ],
-        "category": "рюкзак",
-        "materials": {"Полиуретан": 100},
-        "in_stock": false,
-        "uah_price": null
-    },
-    {
         "id": 2,
         "name": "КАРМАНЫ TEXTURE COAX",
         "description": "ПАЛЬТО С КОЖАНЫМ ВЫРЕЗОМ И ДЛИННЫМ РУКАВОМ. КАРМАНЫ С КРЫШКОЙ ВПЕРЕД. НИЗКИЙ С ОТКРЫТИЕМ СПИНКИ. ПЕРЕДНЕЕ ЗАКРЫТИЕ С КНОПКАМИ.",

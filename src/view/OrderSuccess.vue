@@ -12,7 +12,7 @@
           <span class="success__order-text">№ заказа</span>
           <span class="success__order-number">235266226</span>
         </div>
-        <a href="#" class="success__link">На главную</a>
+        <router-link :to="{name: 'Main'}" class="success__link">На главную</router-link>
       </div>
       <div class="success__img-inner">
         <img src="@/assets/images/success.jpg" alt="" class="success__img" />
